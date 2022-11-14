@@ -1,5 +1,8 @@
 resource "aws_s3_bucket" "tahastaticwebsite1122" {
-    bucket = "tahasstaticwebsiteinterraform1122"
+    bucket = "tahasstaticwebsiteinterraform11221"
+    versioning {
+        enabled = true
+    }
 }
 
 resource "aws_s3_bucket_object" "index" {
