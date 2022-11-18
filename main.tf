@@ -10,14 +10,14 @@ terraform {
 }
 
 provider "aws" {
-    region = "us-west-2"
+    region = "us-east-1"
 }
 
 resource "aws_s3_bucket" "tahascats" {
-    bucket = "tahas-cat-marley"
+    bucket = "tahas-cat-marley1"
 
     tags = {
-        Name = "tahas-cat-marley"
+        Name = "tahas-cat-marley1"
         Environment = "Dev"
     }
 }

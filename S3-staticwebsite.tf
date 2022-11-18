@@ -3,6 +3,19 @@ resource "aws_s3_bucket" "tahastaticwebsite1122" {
     versioning {
         enabled = true
     }
+    lifecycle_rule {
+        id      = "lifecycleruletahas2"
+        enabled = true
+    
+    transition {
+        days          = 30
+        storage_class = "STANDARD_IA"
+    }
+    transition {
+        days          = 60
+        storage_class = "GLACIER"
+    }
+    }
 }
 
 resource "aws_s3_bucket_object" "index" {
